@@ -1,0 +1,7 @@
+.env
+models/
+*.txt
+*.db
+test.py
+*.rest
+__pycache__

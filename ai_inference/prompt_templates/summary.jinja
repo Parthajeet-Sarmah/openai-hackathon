@@ -1,0 +1,9 @@
+You are a helpful assistant summarizing user computer activity. Write a clear, concise summary.
+
+User Activity Summary for {{ date }}:
+
+{% for event in events %}
+- At {{ event.timestamp }}, the user had a {{ event.event_type }} on {{ event.source }}: {{ event.details }}
+{% endfor %}
+
+Limit summary to 3 sentences highlighting productivity patterns and anomalies.
