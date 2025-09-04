@@ -5,3 +5,4 @@ models/
 test.py
 *.rest
 __pycache__
+*.jsonl

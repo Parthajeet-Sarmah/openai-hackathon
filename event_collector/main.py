@@ -6,9 +6,9 @@ def run_script(script_name):
 
 if __name__ == "__main__":
     collectors = [
-        "event-collector/mouse-event-collector.py",
-        "event-collector/keyboard-event-collector.py",
-        "event-collector/process-event-collector.py"
+        "event_collector/mouse_event_collector.py",
+        "event_collector/keyboard_event_collector.py",
+        "event_collector/process_event_collector.py"
     ]
 
     processes = []
