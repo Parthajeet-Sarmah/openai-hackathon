@@ -4,6 +4,8 @@ from pynput import mouse
 
 LOG_FILE = "mouse_events.jsonl"
 
+last_move_time = 0
+
 def log_event(event_type, x, y, button=None, pressed=None):
     entry = {
         "timestamp": time.time(),
@@ -17,7 +19,12 @@ def log_event(event_type, x, y, button=None, pressed=None):
     print(entry)
 
 def on_move(x, y):
-    log_event("move", x, y)
+    global last_move_time
+    current_time = time.time()
+
+    if current_time - last_move_time >= 1.0:
+        log_event("move", x, y)
+        last_move_time = current_time
 
 def on_click(x, y, button, pressed):
     log_event("click", x, y, button, pressed)
