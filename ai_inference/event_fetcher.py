@@ -10,14 +10,16 @@ class EventFetcher:
         cur = conn.cursor()
 
         cur.execute("SELECT MAX(timestamp) FROM events")
-        max_timestamp = cur.fetchone()[0] or 0
+        max_timestamp = cur.fetchone()[0]
 
-        print(max_timestamp)
+        print(self.last_timestamp, max_timestamp, self.last_timestamp == max_timestamp)
 
         if self.last_timestamp >= max_timestamp:
             self.last_timestamp = max_timestamp
             conn.close()
             return []
+        
+        self.last_timestamp = max_timestamp
 
         q = "SELECT timestamp, source, event, data FROM events"
         params = []

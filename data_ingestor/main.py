@@ -1,4 +1,3 @@
-import json
 import os
 import threading
 import queue
@@ -7,7 +6,7 @@ import sqlite3
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from pydantic import BaseModel, ValidationError, Field
-from typing import Optional, Any
+from typing import Optional
 
 # Configure your log files here
 LOG_FILES = {

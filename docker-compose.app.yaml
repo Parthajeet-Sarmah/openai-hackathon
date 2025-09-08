@@ -1,0 +1,18 @@
+services:
+  activity-monitor:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    networks:
+      - activity-monitor
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    environment:
+      - PYTHONPATH=/app
+      - DISPLAY=${DISPLAY}
+      - QT_QPA_PLATFORM=xcb
+
+networks:
+  activity-monitor:

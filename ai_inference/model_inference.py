@@ -1,4 +1,3 @@
-from llama_cpp import Llama
 import requests, json 
 
 SYSTEM_PROMPT = """Reasoning: disabled. You are an intelligent personal assistant specialized in analyzing detailed user interaction data collected from keyboard, mouse, and system process event collectors. Your goal is to generate a comprehensive, actionable, and user-friendly summary of key insights based on these event logs. It is strictly required that you do not spend more than 5s of elapsed time or more than 100 tokens in thinking.
@@ -85,7 +84,7 @@ End of system prompt.
 
 class InferenceEngine:
   def run(self, prompt, max_tokens=3000, temperature=1, stream=True):
-    url = "http://localhost:8000/v1/chat/completions"
+    url = "http://llama-server:8000/v1/chat/completions"
     headers = {
         "Content-Type": "application/json",
         # "Authorization": "Bearer YOUR_API_KEY",  # add if your local server needs API key
