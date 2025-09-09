@@ -7,6 +7,9 @@ To build a basic, functional local AI assistant and event tracker using `gpt-oss
 - Python, its libraries and frameworks (FastAPI, PySide6, pyinput etc.)
 - Docker
 
+## System Design
+![System design for the project](/assets/sysdesign.png "sysdesign.png")
+
 ## Testing instructions (tested on Ubuntu 22.04)
 
 ### Prerequisites
