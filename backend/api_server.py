@@ -24,7 +24,7 @@ def summarize(req: InferenceRequest):
     events = event_fetcher.fetch_recent_events(event_type=req.event_type, limit=req.max_events)
 
     if(len(events) <= 0):
-        return Response("**No new events have occured as of now!**", status_code=200)
+        return Response("**No new events have occured as of now!** \n\n", status_code=200)
 
     prompt = build_summary_prompt(events, summary_type=req.summary_type)
     tokens_generator = engine.run(prompt, stream=True)

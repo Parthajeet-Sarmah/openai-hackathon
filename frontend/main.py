@@ -23,7 +23,7 @@ class Worker(QObject):
                         
                         self.token_received.emit(chunk)
         except httpx.RemoteProtocolError:
-            self.token_received.emit(".....**The response stream was cut off**")
+            self.token_received.emit(".....**The response stream was cut off** \n\n")
 
 class OverlayUI(QWidget):
 

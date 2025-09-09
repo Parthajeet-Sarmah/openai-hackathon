@@ -9,7 +9,7 @@ services:
       "--model", "/models/openai_gpt-oss-20b-MXFP4.gguf",
       "--host", "0.0.0.0",
       "--port", "8000",
-      "--n_gpu_layers", "0", #Adjust based on GPU VRAM, I only have 4GB on my laptop :(
+      "--n_gpu_layers", "2", #Adjust based on GPU VRAM, I only have 4GB on my laptop :(
       "--reasoning-format", "none",
       "--chat-template-kwargs", '{"reasoning_effort": "disabled"}'
     ]

@@ -10,7 +10,8 @@ class EventFetcher:
         cur = conn.cursor()
 
         cur.execute("SELECT MAX(timestamp) FROM events")
-        max_timestamp = cur.fetchone()[0]
+        c = cur.fetchone()[0]
+        max_timestamp = c if c else 0
 
         print(self.last_timestamp, max_timestamp, self.last_timestamp == max_timestamp)
 
