@@ -10,7 +10,7 @@ To build a basic, functional local AI assistant and event tracker using `gpt-oss
 ## System Design
 ![System design for the project](/assets/sysdesign.png "sysdesign.png")
 
-## Testing instructions (tested on Ubuntu 22.04)
+## Testing instructions (tested on Pop!_OS 22.04 LTS)
 
 ### Prerequisites
 - Docker must be installed for the system
